@@ -59,14 +59,13 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 10px;
   padding-bottom: 4px;
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.7;
+  line-height: 1.8;
   letter-spacing: -0.03em;
 }
 .underline:before {
@@ -144,6 +143,7 @@ body {
 .arrow-hover .wrap {
   overflow: hidden;
   position: relative;
+  margin-left: 10px;
 }
 .arrow-hover .wrap .hovered {
   bottom: 100%;
@@ -882,6 +882,8 @@ body {
     display: flex;
   }
 }
+
+/* DOWNLOAD SECTION START */
 .download {
   padding-top: 100px;
   margin-top: 100px;
@@ -904,23 +906,24 @@ body {
   font-weight: 600;
   line-height: 1;
   letter-spacing: -0.03em;
+  margin-bottom: 90px;
 }
 @media (max-width: 950px) {
   .download h2 {
     font-size: 45px;
+    margin-bottom: 60px;
   }
 }
 @media (max-width: 500px) {
   .download h2 {
     font-size: 35px;
+    margin-bottom: 50px;
   }
 }
-.download .songs {
-  margin-top: 20px;
-}
+
 .download .songs > a {
   text-decoration: none;
-  padding: 40px 20px;
+  padding: 40px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -928,26 +931,64 @@ body {
 .download .songs > a:not(:first-child) {
   border-top: 1px solid #333333;
 }
-.download .songs > a:last-child {
-  border-bottom: 1px solid #333333;
-}
+
 @media (max-width: 950px) {
   .download .songs > a {
     padding: 40px 0;
-    flex-direction: column;
-    align-items: start;
-    gap: 16px;
   }
 }
-.download .songs > a h3 {
+.download .songs > a h4 {
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.8;
   letter-spacing: -0.03em;
   color: #828282;
 }
+
+/* UPDATE STYLES */
+
+.track-list-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.songs:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.mob-border-bottom {
+  border-bottom: 1px solid #333333;
+}
+
+@media only screen and (min-width: 768px) {
+  .songs:not(:last-child) {
+    margin-bottom: 70px;
+  }
+  .mob-border-bottom {
+    border-bottom: none;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .track-list-title {
+    font-size: 25px;
+  }
+
+  .hidden {
+    display: block;
+  }
+}
+
+/* DOWNLOAD SECTION END */
 footer {
-  margin-top: 150px;
+  margin-top: 110px;
   padding: 40px 0 80px;
   font-size: 14px;
   font-weight: 500;
@@ -963,7 +1004,7 @@ footer {
 }
 @media (max-width: 950px) {
   footer {
-    margin-top: 120px;
+    margin-top: 100px;
     border-top: none;
     padding: 0 0 60px;
   }
